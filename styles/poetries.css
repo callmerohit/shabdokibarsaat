@@ -1,0 +1,46 @@
+body{
+  background-color: rgb(232, 226, 226);
+}
+.poetries {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.poetry-text {
+  flex: 1;
+  max-width: 100%;
+  padding: 60px;
+}
+.poem{
+  font-family: cursive;
+  text-align: center;
+  font-size: 18px;
+  border: 1px solid rgb(204, 204, 204);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 8px;
+  border-radius: 5%;
+  padding: 20px;
+  margin:10px;
+  width: 385px;
+  display: inline-grid;
+  background-color: white;
+}
+.poem h2{
+  margin-bottom: -10px;
+  font-size: 20px;
+}
+
+@media (max-width: 768px) {
+  .poem{
+  margin: -10px;
+  margin-bottom: 30px;
+  width: 100%;
+  }
+}
+@media (min-width:769px) and (max-width:1018px){
+  .poem{
+    margin: -10px;
+    margin-bottom: 30px;
+    width: 100%;
+    }
+} 
+

@@ -1,0 +1,199 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(232, 226, 226);
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 45px 20px;
+  }
+  
+  .navbar-logo {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .navbar-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar-links li {
+    margin: 0 15px;
+  }
+  
+  .navbar-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  
+  .navbar-links a:hover {
+    color: #f0a500;
+  }
+  
+  .navbar-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .bar {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    margin: 4px 0;
+  }
+  .logo{
+    height: 55px;
+    width: 56px;
+    position: absolute;
+    left: 255px;
+  }
+  .homeHeading{
+    text-align: center;
+  }
+  .homeHeading h1{
+    font-size: 45px;
+  }
+                                        /* Home Images */
+.photo-gallery {
+  text-align: center;
+  padding: 0px 20px;
+}
+
+.photo-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 36px;
+    position: relative;
+    bottom: 80px; 
+}
+
+.gallery-photo {
+  border: 3px solid black;
+  box-shadow: 0 0 10px #4a4a4a;
+  border-radius: 10px; 
+  width: 300px;
+  height: auto;
+  object-fit: cover; 
+}
+
+  .navbar-links.active {
+    left: 0;
+    display: flex;
+  }
+  
+  .hero {
+    text-align: center;
+    padding: 70px 20px;
+    color: rgb(5, 5, 5);
+  }
+.btn {
+    background: #f0a500;
+    color: white;
+    padding: 14px 24px;
+    text-decoration: none;
+    border-radius: 5px;
+    position: relative;
+    bottom: 100px;
+    text-align: center;
+  }
+  .btn:hover{
+    background-color: #de9a07;
+  }
+  
+  .introduction{
+    padding: 50px 20px;
+    text-align: center;
+  }
+  .introduction h2 {
+    font-size: 50px;
+  }
+  .introduction p {
+    font-family: cursive;
+    font-size: 20px;
+    background-color: #333;
+    color: white;
+    width: 98%;
+    padding: 15px;
+    border-radius: 10px;
+    position: relative;
+    bottom: 80px;
+  }
+
+  footer {
+    font-size: 18px;
+    background-color: #333;
+    color: white;
+    padding: 30px;
+    text-align: center;
+  }
+  .social-links {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .social-links li {
+    display: inline;
+    margin: 0 10px;
+  }
+  
+  .social-links a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .social-links a:hover {
+    color: #f0a500;
+  }
+  .footer-icons{
+    font-size: 40px;
+  }
+  @media screen and (max-width: 768px) {
+    .navbar-links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      position: absolute;
+      top: 122px;
+      left: -100%;
+      background-color: #333;
+      transition: all 0.5s ease;
+      padding-bottom: 5px;
+      z-index: 100;
+    }
+  
+    .navbar-links li {
+      margin: 15px 0;
+      text-align: center;
+    }
+  
+    .navbar-links a {
+      font-size: 1.2rem;
+    }
+  
+    .navbar-toggle {
+      display: flex;
+    }
+    .gallery-photo {
+        width: 100%; 
+        max-width: 300px;
+      }
+      .homeHeading h1{
+        font-size: 35px;
+      }
+      .introduction p {
+        width: 90%;
+        font-size: 15px;
+        line-height: 20px;
+      }
+  }
