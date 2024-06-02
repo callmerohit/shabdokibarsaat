@@ -7,8 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
       navbarLinks.classList.toggle('active');
     });
   });
-  
- 
+
 // Function to open image in fullscreen mode
 function openFullscreen(image) {
   var fullscreenDiv = document.createElement("div");
@@ -17,10 +16,55 @@ function openFullscreen(image) {
   img.src = image.src;
   fullscreenDiv.appendChild(img);
   document.body.appendChild(fullscreenDiv);
-
-  // Close fullscreen mode on clicking outside the image
   fullscreenDiv.onclick = function() {
     document.body.removeChild(fullscreenDiv);
   };
 }
 
+//Swiper
+var swiper;
+function initSwiper() {
+    swiper = new Swiper('.swiper-container', {
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+}
+var swiper;
+function initSwiper() {
+    swiper = new Swiper('.swiper-container', {
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+}
+function checkScreenSize() {
+    if (window.innerWidth < 768) {
+        if (!swiper) {
+            initSwiper();
+        }
+        document.querySelector('.photo-gallery').style.display = 'none';
+        document.querySelector('.swiper-container').style.display = 'block';
+    } else {
+        if (swiper) {
+            swiper.destroy(true, true);
+            swiper = null;
+        }
+        document.querySelector('.photo-gallery').style.display = 'block';
+        document.querySelector('.swiper-container').style.display = 'none';
+    }
+}
+window.addEventListener('load', checkScreenSize);
+window.addEventListener('resize', checkScreenSize);

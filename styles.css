@@ -17,6 +17,11 @@ body {
     font-size: 1.5rem;
     font-weight: bold;
   }
+  .navbar-logo a{
+    text-decoration: none;
+    color: white;
+  }
+
   
   .navbar-links {
     list-style: none;
@@ -63,7 +68,6 @@ body {
   .homeHeading h1{
     font-size: 45px;
   }
-                                        /* Home Images */
 .photo-gallery {
   text-align: center;
   padding: 0px 20px;
@@ -104,7 +108,7 @@ body {
     text-decoration: none;
     border-radius: 5px;
     position: relative;
-    bottom: 100px;
+    bottom: 25px;
     text-align: center;
   }
   .btn:hover{
@@ -119,12 +123,13 @@ body {
     font-size: 50px;
   }
   .introduction p {
-    font-family: cursive;
+    font-family: Georgia, serif;
     font-size: 20px;
     background-color: #333;
     color: white;
     width: 98%;
     padding: 15px;
+    line-height: 30px;
     border-radius: 10px;
     position: relative;
     bottom: 80px;
@@ -158,18 +163,61 @@ body {
   .footer-icons{
     font-size: 40px;
   }
+
+
+
+  .photo-gallery {
+    display: block;
+}
+
+.swiper-container {
+    display: none;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    max-width: 100%;
+    height: auto;
+    height: 350px;
+    width: 250px;
+    border: 2px solid black;
+    box-shadow: 0 0 10px #4a4a4a;
+    border-radius: 10px;
+}
+
+.swiper-button-next, .swiper-button-prev {
+    color: #333;
+    font-weight: bolder;
+  }
+
+@media (max-width: 768px) {
+    .photo-gallery {
+        display: none;
+    }
+}
   @media screen and (max-width: 768px) {
+    .navbar {
+      padding: 25px 20px;
+    }
     .navbar-links {
       display: none;
-      flex-direction: column;
       width: 100%;
       position: absolute;
-      top: 122px;
+      top: 83px;
       left: -100%;
       background-color: #333;
-      transition: all 0.5s ease;
+      transition: all .5s ease;
       padding-bottom: 5px;
       z-index: 100;
+      flex-direction: column;
     }
   
     .navbar-links li {
@@ -180,6 +228,15 @@ body {
     .navbar-links a {
       font-size: 1.2rem;
     }
+    .navbar-logo {
+      font-size: 1.2rem;
+    }
+    .logo{
+      height:35px;
+      width: 35px;
+      position: absolute;
+      left:210px;
+    }
   
     .navbar-toggle {
       display: flex;
@@ -189,11 +246,13 @@ body {
         max-width: 300px;
       }
       .homeHeading h1{
-        font-size: 35px;
+        font-size: 25px;
       }
       .introduction p {
         width: 90%;
-        font-size: 15px;
-        line-height: 20px;
+        font-size: 20px;
+        line-height: 22px;
+        position: relative;
+        bottom: 10px;
       }
   }

@@ -12,8 +12,9 @@ body{
   padding: 60px;
 }
 .poem{
-  font-family: cursive;
+  font-family: Georgia, serif;
   text-align: center;
+  line-height: 40px;
   font-size: 18px;
   border: 1px solid rgb(204, 204, 204);
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 8px;
@@ -31,9 +32,9 @@ body{
 
 @media (max-width: 768px) {
   .poem{
-  margin: -10px;
-  margin-bottom: 30px;
   width: 100%;
+  margin: -20px;
+  margin-bottom: 30px;
   }
 }
 @media (min-width:769px) and (max-width:1018px){
